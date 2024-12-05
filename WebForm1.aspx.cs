@@ -44,8 +44,8 @@ namespace CaluladoraApp
         {
             if (ViewState["Numero1"] != null && ViewState["Numero2"] != null && ViewState["Operador"] != null)
             {
-                int v1 = Convert.ToInt32(ViewState["Numero1"].ToString());
-                int v2 = Convert.ToInt32(ViewState["Numero2"].ToString());
+                double v1 = Convert.ToDouble(ViewState["Numero1"].ToString());
+                double v2 = Convert.ToDouble(ViewState["Numero2"].ToString());
 
                 switch (ViewState["Operador"].ToString())
                 {
@@ -124,35 +124,35 @@ namespace CaluladoraApp
         }
         public class Cuentas
         {
-            public static int suma(int a, int b)
+            public static double suma(double a, double b)
             {
                 return a + b;
             }
-            public static int div(int a, int b)
+            public static double div(double a, double b)
             {
                 return a / b;
             }
-            public static int mult(int a, int b)
+            public static double mult(double a, double b)
             {
                 return a * b;
             }
-            public static int res(int a, int b)
+            public static double res(double a, double b)
             {
                 return a - b;
             }
-            public static int log(int a, int b)
+            public static double log(double a, double b)
             {
                 return Convert.ToInt32(Math.Log(a, b));
             }
-            public static int pot(int a, int b)
+            public static double pot(double a, double b)
             {
                 return Convert.ToInt32(Math.Pow(a,b));
             }
-            public static double raiz(int a, int b)
+            public static double raiz(double a, double b)
             {
                 return Convert.ToInt32(Math.Pow(b, 1.0 / a));
             }
-            public static int mod(int a, int b)
+            public static double mod(double a, double b)
             {
                 return a % b;
             }
