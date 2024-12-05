@@ -61,6 +61,18 @@ namespace CaluladoraApp
                     case "/":
                         resultadoTxt.Text = Cuentas.div(v1, v2).ToString();
                         break;
+                    case "^":
+                        resultadoTxt.Text = Cuentas.pot(v1, v2).ToString();
+                        break;
+                    case "√":
+                        resultadoTxt.Text = Cuentas.raiz(v1, v2).ToString();
+                        break;
+                    case "log":
+                        resultadoTxt.Text = Cuentas.log(v1, v2).ToString();
+                        break;
+                    case "%":
+                        resultadoTxt.Text = Cuentas.mod(v1, v2).ToString();
+                        break;
                 }
 
                 ViewState["Numero1"] = resultadoTxt.Text;
@@ -79,7 +91,37 @@ namespace CaluladoraApp
             ViewState["aux"] = null;
             resultadoTxt.Text = null;
         }
+        protected void NegativoBtn(object sender, EventArgs e)
+        {
+            if (ViewState["Numero1"] == null)
+            {
+                ViewState["Numero1"] += "-";
+                resultadoTxt.Text = ViewState["Numero1"].ToString();
+            }
+            else if (ViewState["Numero2"] == null & ViewState["Operador"] != null)
+            {
+                ViewState["aux"] = "-";
+                ViewState["Numero2"] += "-";
+                resultadoTxt.Text += ViewState["aux"].ToString();
+            }
+            else
+            {
+                ViewState["Operador"] = "-";
+                resultadoTxt.Text += ViewState["Operador"].ToString();
+            }
+        }
 
+        protected void MostrarCientifica(object sender, EventArgs e)
+        {
+            if (fila5.Visible)
+            {
+                fila5.Visible = false;
+            }
+            else
+            {
+                fila5.Visible = true;
+            }
+        }
         public class Cuentas
         {
             public static int suma(int a, int b)
@@ -98,6 +140,24 @@ namespace CaluladoraApp
             {
                 return a - b;
             }
+            public static int log(int a, int b)
+            {
+                return Convert.ToInt32(Math.Log(a, b));
+            }
+            public static int pot(int a, int b)
+            {
+                return Convert.ToInt32(Math.Pow(a,b));
+            }
+            public static double raiz(int a, int b)
+            {
+                return Convert.ToInt32(Math.Pow(b, 1.0 / a));
+            }
+            public static int mod(int a, int b)
+            {
+                return a % b;
+            }
         }
+
+        
     }
 }
