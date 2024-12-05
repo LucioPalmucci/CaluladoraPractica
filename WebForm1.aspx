@@ -17,28 +17,28 @@
                 </div>
                 <div id="caluclos">
                     <div id="fila1" class="mb-2 row ">
-                        <asp:Button Text="7" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="8" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="9" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="/" runat="server" CssClass="btn btn-secondary ps-4 pe-4 col m-2 fs-4"/>
+                        <asp:Button Text="7" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarNumero"/>
+                        <asp:Button Text="8" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarNumero"/>
+                        <asp:Button Text="9" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarNumero"/>
+                        <asp:Button Text="/" runat="server" CssClass="btn btn-secondary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarOperador"/>
                     </div>
                     <div id="fila2" class="mb-2 row">
-                        <asp:Button Text="4" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="5" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="6" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="*" runat="server" CssClass="btn btn-secondary ps-4 pe-4 col m-2 fs-4"/>
+                        <asp:Button Text="4" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarNumero"/>
+                        <asp:Button Text="5" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarNumero"/>
+                        <asp:Button Text="6" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarNumero"/>
+                        <asp:Button Text="*" runat="server" CssClass="btn btn-secondary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarOperador"/>
                     </div>
                     <div id="fila3" class="mb-2 row">
-                        <asp:Button Text="1" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="2" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="3" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="-" runat="server" CssClass="btn btn-secondary ps-4 pe-4 col m-2 fs-4"/>
+                        <asp:Button Text="1" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarNumero"/>
+                        <asp:Button Text="2" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarNumero"/>
+                        <asp:Button Text="3" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarNumero"/>
+                        <asp:Button Text="-" runat="server" CssClass="btn btn-secondary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarOperador"/>
                     </div>
                     <div id="fila4" class="mb-2 row">
-                        <asp:Button Text="C" runat="server" CssClass="btn btn-danger ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="0" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="=" runat="server" CssClass="btn btn-success ps-4 pe-4 col m-2 fs-4"/>
-                        <asp:Button Text="+" runat="server" CssClass="btn btn-secondary ps-4 pe-4 col m-2 fs-4"/>
+                        <asp:Button Text="C" runat="server" CssClass="btn btn-danger ps-4 pe-4 col m-2 fs-4" OnClick="clear_btn"/>
+                        <asp:Button Text="0" runat="server" CssClass="btn btn-primary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarNumero"/>
+                        <asp:Button Text="=" runat="server" CssClass="btn btn-success ps-4 pe-4 col m-2 fs-4" OnClick="igualBtn_Click"/>
+                        <asp:Button Text="+" runat="server" CssClass="btn btn-secondary ps-4 pe-4 col m-2 fs-4" OnClick="AgregarOperador"/>
                     </div>
                 </div>
             </div>
